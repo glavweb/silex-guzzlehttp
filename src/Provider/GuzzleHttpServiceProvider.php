@@ -28,7 +28,7 @@ class GuzzleHttpServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $app)
     {
-        $app['composite_object_service'] = function () use ($app) {
+        $app['guzzle'] = function () use ($app) {
             $configuration = [];
 
             if (isset($app['guzzle.base_uri'])) {
